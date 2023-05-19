@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { AuthRequiredError } from './lib/exceptions';
 
 export default function Home() {
-  const session = null;
+  const session = 1;
   if (!session) {
     throw new AuthRequiredError(
       'Only authenticated users can access this resource'

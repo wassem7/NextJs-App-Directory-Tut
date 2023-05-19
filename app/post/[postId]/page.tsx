@@ -5,6 +5,16 @@ interface pageProps {
     postId: string;
   };
 }
+
+export async function generateStaticParams() {
+  const posts = ['post one', 'post two'];
+
+  return posts.map((post) => {
+    return {
+      postId: post,
+    };
+  });
+}
 const postPage: FC<pageProps> = ({ params }) => {
   console.log(params);
 
